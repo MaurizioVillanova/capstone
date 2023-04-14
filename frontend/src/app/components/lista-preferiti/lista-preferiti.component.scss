@@ -1,0 +1,40 @@
+.container {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  th,
+  td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+  }
+
+  th {
+    background-color: #343a40;
+    color: #fff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  button i {
+    font-size: 24px;
+  }
+
+  button:hover i {
+    color: red;
+  }

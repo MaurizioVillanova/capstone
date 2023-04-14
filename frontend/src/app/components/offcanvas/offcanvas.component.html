@@ -1,0 +1,23 @@
+
+<ng-template #content let-offcanvas >
+    <div class="nerd-links">
+   <!--   <a [routerLink]="['lista_preferiti',localStorage.getItem('id') ]"><i class="bi bi-heart-fill"></i> Preferiti</a>-->
+      <a [routerLink]="['/carrello',localStorage.getItem('id') ]"><i class="bi bi-cart-check-fill"></i> Carrello</a>
+      <div *ngIf="roles">
+
+        <div *ngIf="roles !== 'ROLE_USER'">
+      <a href="preferito"><i class="bi bi-people-fill"></i> Preferiti dagli utenti</a>
+      <a href="aggiungiprodotto"><i class="bi bi-people-fill"></i> aggiungi Prodotto</a>
+   
+        </div>
+      </div>
+    </div>
+  
+    <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"><i class="bi bi-x"></i></button>
+  </ng-template>
+  
+  <button class="btn btn-lg btn-outline-primary nerd-button" (click)="open(content)">
+    <i class="bi bi-cart-check-fill"></i>
+    <span class="nerd-button-label"></span>
+  </button>
+  

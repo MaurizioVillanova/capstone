@@ -1,0 +1,25 @@
+<div class="container align-items-center my-3">
+    <div class="card my-5">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome Completo</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let user of users">
+                <td style="color: yellow;">{{ user.idUser }}</td>
+                <td style="color: yellow;">{{ user.nomeCompleto }}</td>
+                <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+  </div>

@@ -1,0 +1,38 @@
+.cardbody-color {
+    background-color: #242526;
+    color: #fff;
+  }
+  
+  .form-label {
+    color: #00ff7f;
+    font-size: 1.5rem;
+  }
+  
+  .form-control {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  
+  .form-control:focus {
+    border-bottom-color: #00ff7f;
+    outline: none;
+  }
+  
+  .btn-success {
+    background-color: #00ff7f;
+    border-color: #00ff7f;
+  }
+  
+  .btn-success:hover {
+    background-color: #007f4e;
+    border-color: #007f4e;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+  }
+  

@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+<div class="container align-items-center my-3">
+  <div class="card my-5">
+    <div class="card-body">
+     <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Descrizione</th>
+            <th scope="col">prezzo</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+       <tr *ngFor="let preferito of preferiti ">
+    <!-- <td>{{preferito|json}}</td>-->
+            <td>{{ preferito[1].nome}}</td>
+            <td><p>{{preferito[1].descrizione}}</p></td>
+            <td><p>{{ preferito[1].prezzo}} € </p></td>
+            <td>
+              <button (click)="rimuoviProdottoDaiPreferiti(userId, preferito.id.toString())">
+                <i class="bi bi-x-circle-fill"></i>
+              </button>
+            
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+     <!-- <ul>
+        <li *ngFor="let preferito of preferiti; let i = index">
+          {{i}}. {{preferito[1].nome}} ({{preferito[1].prezzo}} €)
+        </li>
+      </ul>
+      
+      <ul>
+       <li *ngFor='let obj of objArray'>
+            {{obj[0].nome}} {{obj[1].prezzo}} <button (click)='cancella(obj[0])'>X</button>
+        </li>
+    </ul>-->
+    </div>
+  </div>
+</div>

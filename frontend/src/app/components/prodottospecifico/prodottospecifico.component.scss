@@ -1,0 +1,100 @@
+.product-img-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f2f2f2;
+  }
+  
+  .product-img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-img-container:hover img {
+    transform: scale(1.1);
+  }
+  .rounded {
+    border-radius: 20px;
+  }
+  
+  .product-info-container {
+    background-color: #242526;
+    color: #fff;
+    padding: 30px;
+  }
+  
+  .product-info-container h2 {
+    color: #00ff7f;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .product-info-container h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-info-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    
+  }
+  
+  /* Aggiungi i seguenti stili per cambiare i colori di testo e sfondo */
+  
+  .product-info-container {
+    background-color: #242526;
+    color: #fff;
+   
+  }
+  @media (min-width: 768px) {
+    .product-info-container  {
+      margin-right:  100px;
+    }
+   
+      
+  }
+  @media (min-width: 320px) and (max-width: 1024px) {
+    .product-info-container {
+      margin-bottom: 50px;
+    }
+  }
+  .product-info-container h2 {
+    color: #00ff7f;
+  }
+  
+  .product-info-container p {
+    color: #fff;
+  }
+
+#like {
+  background-color: #F00; /* Rosso */
+  border-color: #F00; /* Rosso */
+  color: #FFF; /* Bianco */
+}
+#compra {
+  background-color: #00BFFF; /* Colore azzurro */
+  color: #FFFFFF; /* Testo bianco */
+}
+@media (max-width: 768px) {
+    .add-to-cart-btn {
+      width: 100px;
+    }
+  }
+  .product-img-container2 {
+    position: relative;
+  }
+  
+  .product-img-container2 img {
+    transition: transform .5s ease;
+  }
+  
+  .product-img-container2:hover img {
+    transform: scale(1.2);
+  }
+  

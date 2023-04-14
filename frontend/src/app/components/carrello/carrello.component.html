@@ -1,0 +1,35 @@
+<div class="table-responsive">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Quantità</th>
+          <th>Prezzo unitario</th>
+          <th>Costo totale</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of carrelloRead.cartItems">
+          <td>{{ item.prodotto.nome }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ (item.prodotto.prezzo).toFixed(2) }}</td>
+          <td>{{ (item.quantity * item.prodotto.prezzo).toFixed(2) }}</td>
+          <td>
+            <button id="rimuovidalCarrello" (click)="rimuoviProdottoDalCarrello(userId, item.id)">
+              <i class="bi bi-cart-dash-fill"></i>
+            </button>
+          </td> 
+        </tr>
+        <tr *ngIf="carrelloRead.totalCost>0" class="fw-bold total">
+          <td  colspan="3">Totale:</td>
+          <td>{{(carrelloRead.totalCost).toFixed(2)}}</td>
+         
+
+        </tr>
+      </tbody>
+    </table>
+</div>
+    <div class=" text-center py-5 px-5">
+        <ngx-paypal [config]="payPalConfig " ></ngx-paypal>
+      </div>

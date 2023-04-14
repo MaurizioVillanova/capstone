@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons%401.5.0/font/bootstrap-icons.css">
+<div class="container">
+    <div class="px-3 py-3">
+      <ol class="list-group list-group-flush">
+        <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <div class="col-md-6 d-flex justify-content-center mb-3 mb-md-0">
+            <div class="product-img-container mx-3" [style.background-image]="'url(' + randomCharacter.attributes.image.original + ')'"></div>
+          </div>
+          <div class="col-md-6 product-info-container rounded px-3 pt-3 pb-1">
+            <h3 class="text-center text-md-left">Benvenuto in One Nerd!</h3>
+            <h2 class="text-center text-md-left"> {{ user.nomeCompleto }}</h2>
+            <h3 class="text-center text-md-left" style="font-size: 14px;">Username: {{ user.username }}</h3>
+            <h3 class="text-center text-md-left" style="font-size: 14px;">Email: {{ user.email }}</h3>
+            <p class="text-center text-md-left">Scegli tra la nostra vasta gamma di prodotti e lascia il tuo cuoricino a tutti i tuoi preferiti!</p>
+            <h1 *ngIf="user == undefined" class="mx-auto" style="text-align: center; margin-top: 10rem;">User not found</h1>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+  

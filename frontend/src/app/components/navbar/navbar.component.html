@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"> <img class="logo-footer"
+                src="../../../assets/img/OIP-removebg-preview (1).png" alt="logo-navbar" width="80" height="80"
+                data-at2x="assets/img/logo.png">One Nerd</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Prodotti
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="Action-Figure">Action-Figures</a></li>
+                        <li><a class="dropdown-item" href="Funko-pop">Funko-pop</a></li>
+                        <li><a class="dropdown-item" href="poster">Poster</a></li>
+                        <li><a class="dropdown-item" href="Dragon-Ball">Dragon-ball</a></li>
+                        <li><a class="dropdown-item" href="Bundle">Bundle</a></li>
+                        <li><a class="dropdown-item" href="Naruto">Naruto</a></li>
+                        <li><a class="dropdown-item" href="Marvel">Marvel</a></li>
+                        <li><a class="dropdown-item" href="Star-Wars">Star-Wars</a></li>
+                        <li><a class="dropdown-item" href="One-piece">One-Piece</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div *ngIf="logged; else notlogged">
+
+                <button  class="btn btn-secondary" (click)="go()">
+                    <i
+                    class="bi bi-person-circle"></i>
+                </button>
+                <button class="btn btn-danger me-2" (click)="logout()" routerLink="login"><i
+                        class="bi bi-box-arrow-right"></i> Logout</button>
+                       
+
+                <ng-container *ngIf="roles">
+
+                    <ng-container  *ngIf="roles !== 'ROLE_USER'">
+                        <button class="btn btn-secondary" routerLink="profilo"><i class="bi bi-people"></i></button>
+                            </ng-container>
+                </ng-container>
+                <app-offcanvas class=" carrello"></app-offcanvas>
+            </div>
+           
+            <ng-template #notlogged>
+
+                <button class="btn btn-primary me-2" routerLink="login"><i class="bi bi-box-arrow-in-right"></i>
+                    Login</button>
+                <button class="btn btn-info" routerLink="register"><i class="bi bi-person-plus"></i> Register</button>
+
+            </ng-template>
+        </div>
+    </div>
+</nav>

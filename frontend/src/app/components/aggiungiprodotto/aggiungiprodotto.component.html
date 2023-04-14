@@ -1,0 +1,34 @@
+<form #prodottoForm="ngForm" (ngSubmit)="onSubmit(); prodottoForm.reset()" class="cardbody-color p-3 rounded">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="nome" class="form-label">Nome:</label>
+        <input [(ngModel)]="prodotto.nome" name="nome" id="nome" class="form-control" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="categoria" class="form-label">Categoria:</label>
+        <input [(ngModel)]="prodotto.categoria" name="categoria" id="categoria" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="descrizione" class="form-label">Descrizione:</label>
+      <textarea [(ngModel)]="prodotto.descrizione" name="descrizione" id="descrizione" class="form-control" required></textarea>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="disponibilita" class="form-label">Disponibilità:</label>
+        <input [(ngModel)]="prodotto.disponibilita" name="disponibilita" id="disponibilita" class="form-control" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="prezzo" class="form-label">Prezzo:</label>
+        <input [(ngModel)]="prodotto.prezzo" name="prezzo" id="prezzo" class="form-control" type="number" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="immagineUrl" class="form-label">Immagine URL:</label>
+      <input [(ngModel)]="prodotto.immagineUrl" name="immagineUrl" id="immagineUrl" class="form-control" required>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-success">Crea prodotto</button>
+    </div>
+  </form>
+<br>  

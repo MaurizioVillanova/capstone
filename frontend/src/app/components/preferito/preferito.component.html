@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3" style="color: #fff;">Prodotti preferiti</h2>
+        <div class="card-body table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Utente</th>
+                <th scope="col">Nome prodotto</th>
+                <th scope="col">Prezzo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let preferito of favoriti">
+                <td style="color: #00ff7f;">{{ preferito.user.nomeCompleto}}</td>
+                <td>{{ preferito.prodotto.nome}}</td>
+                <td>{{ preferito.prodotto.prezzo}} €</td>
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="favoriti.length <= 0" class="alert alert-info" role="alert">
+            <h4 class="alert-heading">Nessun prodotto trovato!</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

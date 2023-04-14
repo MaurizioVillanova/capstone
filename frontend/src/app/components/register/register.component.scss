@@ -1,0 +1,46 @@
+.cardbody-color {
+    background-color: #242526;
+    color: #fff;
+    border-radius: 20px;
+  }
+  .form-group label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .form-control {
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #00ff7f;
+  }
+  .invalid-feedback {
+    font-size: 14px;
+    color: #ff4136;
+  }
+  .btn-success {
+    background-color: #00ff7f;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+  }
+  .btn-success:hover {
+    background-color: #fff;
+    color: #242526;
+  }
+  .btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .text-danger {
+    color: #ff4136;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  

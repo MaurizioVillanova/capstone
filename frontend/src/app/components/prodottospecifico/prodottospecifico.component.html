@@ -1,0 +1,79 @@
+<div class="row justify-content-center justify-content-md-start align-items-center">
+    <div class="col-12 col-md-6 px-0">
+        <div class="product-img-container" *ngIf="prodotti != undefined">
+            <img src="{{ prodotti.immagineUrl }}" alt="{{ prodotti.nome }}">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="product-info-container text-center">
+            <h1>{{ prodotti.nome }}</h1>
+            <ul class="list-unstyled">
+                <li>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="text-left" style="flex:1">Prezzo</h2>
+                        <h2 class="text-right" style="flex:1">${{ prodotti.prezzo | number : '1.2-2' }}</h2>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-left" style="flex:1">Descrizione</h5>
+                        <h5 class="text-right" style="flex:1">{{ prodotti.descrizione }}</h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-left" style="flex:1">Categoria</h5>
+                        <h5 class="text-right" style="flex:1">{{ prodotti.categoria }}</h5>
+                    </div>
+
+                    
+                </li>
+                <li>
+                    <div *ngIf="logged; else notlogged">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mt-4">
+                            <div class="d-flex flex-wrap">
+                                <button class="nerd-btn mx-1 mb-4" (click)="decreaseQuantity()">-</button>
+                                <input class="quantity-input mx-1 mb-4" type="number" [(ngModel)]="quantity">
+                                <button class="nerd-btn mx-1 mb-4" (click)="increaseQuantity()">+</button>
+                            </div>
+                            <div>
+                                <button type="button" id="compra" class="btn btn-primary tooltips mx-1 mb-4"
+                                    data-placement="top" data-toggle="tooltip"
+                                    (click)="aggiungiCarrello(prodotti.idProdotto, 0, quantity)">
+                                    <i class="bi bi-cart-plus"></i>
+                                </button>
+                                
+                                <button *ngIf="disabledButton===false" type="button" id="like" class="btn btn-primary tooltips mx-1 mb-4" [disabled]=false
+                                    data-placement="top" data-toggle="tooltip"
+                                    (click)="aggiungiAiPreferiti(prodotti.idProdotto, 0)">
+                                    <i class="bi bi-suit-heart-fill"></i>
+                                </button>
+                                <button *ngIf="disabledButton===true" type="button" id="like" class="btn btn-primary tooltips mx-1 mb-4" [disabled]=true
+                                    data-placement="top" data-toggle="tooltip"
+                                    (click)="aggiungiAiPreferiti(prodotti.idProdotto, 0)">
+                                    <i class="bi bi-suit-heart-fill"></i>
+                                </button>
+                                <div *ngIf="roles">
+
+                                    <div *ngIf="roles !== 'ROLE_USER'">
+                                        <button type="button" id="like" class="btn btn-primary tooltips mx-1 mb-4"
+                                            data-placement="top" data-toggle="tooltip"
+                                            (click)="rimuoviProdotto(prodotti.idProdotto)" (click)="go()">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-template #notlogged>
+                        <h1>Per poter acquistare devi prima registrarti!</h1>
+                    </ng-template>
+                </li>
+            </ul>
+        </div>
+    </div>
+   
+</div>

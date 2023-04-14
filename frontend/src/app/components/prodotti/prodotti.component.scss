@@ -1,0 +1,50 @@
+.card-img-zoom {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .card-img-zoom img {
+    transition: all 0.3s ease-out;
+  }
+  
+  .card-img-zoom:hover img {
+    transform: scale(1.1);
+  }
+  body {
+    font-family: 'Manga Temple', sans-serif;
+  }
+  .my-button {
+    background-color: #F00; /* Rosso */
+    border-color: #F00; /* Rosso */
+    color: #FFF; /* Bianco */
+  }
+  #compra {
+    background-color: #00BFFF; /* Colore azzurro */
+    color: #FFFFFF; /* Testo bianco */
+  }
+  .card {
+    /* set a fixed height for the card */
+    margin-bottom: 20px; /* add some margin between each card */
+    margin-top: auto;
+  }
+  .table {
+    font-family: 'Courier New', monospace; /* cambia il font della tabella con un font a larghezza fissa come Courier New /
+    background-color: #272822; / cambia il colore di sfondo della tabella con un grigio scuro /
+    color: #F8F8F2; / cambia il colore del testo della tabella con un bianco grigio /
+    border: 1px solid #75715E; / cambia il colore del bordo della tabella con un grigio */
+    }
+    
+    .table th {
+    background-color: #75715E; /* cambia il colore di sfondo delle celle dell'intestazione con un grigio /
+    color: #F8F8F2; / cambia il colore del testo delle celle dell'intestazione con un bianco grigio */
+    }
+    
+    .table td {
+    background-color: #3E3D32; /* cambia il colore di sfondo delle celle del corpo della tabella con un grigio scuro /
+    color: #F8F8F2; / cambia il colore del testo delle celle del corpo della tabella con un bianco grigio */
+    }
+    .card {
+        height: 100%;
+      }
+    
